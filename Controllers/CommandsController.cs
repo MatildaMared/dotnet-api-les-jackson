@@ -12,7 +12,7 @@ public class CommandsController : ControllerBase
     private readonly MockCommanderRepo _repository = new MockCommanderRepo();
 
     [HttpGet]
-    public ActionResult <IEnumerable<Command>> GetAllCommands()
+    public ActionResult<IEnumerable<Command>> GetAllCommands()
     {
         var commandItems = _repository.GetAppCommands();
 
@@ -21,7 +21,7 @@ public class CommandsController : ControllerBase
 
     // GET api/commands/5
     [HttpGet("{id}")]
-    public ActionResult <Command> GetCommandById(int id)
+    public ActionResult<Command> GetCommandById(int id)
     {
         var commandItem = _repository.GetCommandById(id);
 
